@@ -9,6 +9,10 @@ const moduleConfig = {
   }]
 };
 
+const devServerConfig = {
+  contentBase: './'
+};
+
 module.exports = {
   entry: './index.js',
   output: {
@@ -17,6 +21,7 @@ module.exports = {
     filename: 'index.js'
   },
   module: moduleConfig,
+  devServer: devServerConfig,
   devtool: '#eval-source-map'
 };
 
