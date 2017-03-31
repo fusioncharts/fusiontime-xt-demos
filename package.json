@@ -1,0 +1,27 @@
+{
+  "name": "fusiontime-xt-demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fusioncharts/fusiontime-xt-demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fusioncharts/fusiontime-xt-demos/issues"
+  },
+  "homepage": "https://github.com/fusioncharts/fusiontime-xt-demos#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "cross-env": "^3.2.4",
+    "webpack": "^2.3.2"
+  }
+}
