@@ -48,3 +48,5 @@ const tsData = {
 };
 
 window.tsData = tsData;
+
+export default tsData;
