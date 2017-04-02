@@ -7,32 +7,32 @@ import Ebola from './data/Ebola';
 const tsData = {
 	web: {
 		metadata: {
-			name: "Web Visits and Downloads",
-			desc: ""
+			name: 'Web Visits and Downloads',
+			desc: 'Simple line series'
 		},
 		data: Web
 	},
 
 	apple: {
 		metadata: {
-			name: "Apple Stock",
-			desc: ""
+			name: 'Apple Stock',
+			desc: 'Candle stick time series chart'
 		},
 		data: Apple
 	},
 
 	mobile: {
 		metadata: {
-			name: "Different Mobile OS",
-			desc: ""
+			name: 'Different Mobile OS',
+			desc: 'Manipulate data'
 		},
 		data: Mobile
 	},
 
 	slack: {
 		metadata: {
-			name: "Slack Conversations",
-			desc: ""
+			name: 'Slack Conversations',
+			desc: 'Fetch data from a JSON URL'
 		},
 		data: Slack
 	},
@@ -40,7 +40,7 @@ const tsData = {
   ebola: {
     metadata: {
       name: 'Ebola Outbreak',
-      desc: ''
+      desc: 'Fetch and compare three differnet examples'
     },
     data: Ebola
   },
