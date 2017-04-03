@@ -3,6 +3,8 @@ import Apple from './data/Apple';
 import Mobile from './data/Mobile';
 import Slack from './data/Slack';
 import Ebola from './data/Ebola';
+import Nasa from './data/Nasa';
+
 
 const tsData = {
 	web: {
@@ -44,6 +46,14 @@ const tsData = {
     },
     data: Ebola
   },
+
+  nasa: {
+  	metadata: {
+  		name: 'Global Temperature Avg',
+  		desc: 'GLOBAL LAND-OCEAN TEMPERATURE INDEX'
+  	},
+  	data: Nasa
+  }
 
 };
 
