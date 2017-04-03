@@ -1,3 +1,4 @@
+
 var data = [
   {
     "date": 1880,
@@ -689,119 +690,138 @@ var data = [
 var dates = [], temps = [], means = [];
 
 data.forEach(function (item) {
-	dates.push(String(item.date));
-	temps.push(String(item.temp));
-	means.push(String(item.mean));
+  dates.push("01/01/"+String(item.date));
+  temps.push(String(item.temp));
+  means.push(String(item.mean));
 });
 
+
 export default {
-	chart: {
-		axes: [{
-			x: {},
-			y: {
-				name: {
-					label: {
-						text: 'Temperature Anomaly'
-					}
-				}
-			}
-		}],
+  chart: {
+    axes: [{
+      x: {
+        numberFormatter: {
+          config: {
+            'fill': '',
+            'align': '',
+            'sign': '',
+            'symbol': '',
+            'zero': '',
+            'width': '',
+            'comma': '',
+            'precision': '1',
+            'type': ''
+          },
+          suffix: '',
+          prefix: ''
+        },
+      },
+      y: {
+        name: {
+          label: {
+            text: 'Temperature Anomaly'
+          }
+        },
+        numberFormatter: {
+          config: {
+            'fill': '',
+            'align': '',
+            'sign': '',
+            'symbol': '',
+            'zero': '',
+            'width': '',
+            'comma': '',
+            'precision': '.1',
+            'type': ''
+          },
+          suffix: '°',
+          prefix: ''
+        },
+      }
+    }],
 
-		datasets: [{
+    datasets: [{
+      "category": {
+        "dateformat": "%m/%d/%Y",
+        "data": dates
+      },
+      "dataset": [{
+        "series": [{
+          "plot": {
+            "type": "line",
+            "group": {
+              "style": {
+                "stroke": "#4f7aa6"
+              }
+            }
+          },
+          "active": true,
+          "name": "Annual Mean",
+          "data": temps
+        }, {
+          "plot": {
+            "type": "line",
+            "group": {
+              "style": {
+                "stroke": "#f08e39 "
+              }
+            }
+          },
+          "active": true,
+          "name": "Five year mean",
+          "data": means
+        }]
+      }]
+    }],
+    "caption": [{
+      "title": {
+        "text": "GLOBAL LAND-OCEAN TEMPERATURE INDEX",
+        "style": {
+          "font-size": "20px",
+          "fill": "#545454"
+        }
+      },
+      "subtitle": {
+        "text": "Gloabl Temperature Change",
+        "style": {
+          "font-size": "15px",
+          "font-weight": "Semibold",
+          "fill": "#7B7B7B"
+        }
+      }
+    }],
+    "legend": [{
+      layout: function(obj) {
+        return obj.block;
+      },
+      position: function(obj) {
+        return obj.right;
+      },
+      orientation: function(obj) {
+        return obj.vertical;
+      },
+      alignment: function(obj) {
+        return obj.top;
+      }
+    }],
 
-			"category": {
-				"dateformat": "%Y",
-				"data": dates
-			},
-			"dataset": [{
-				"series": [{
-					"plot": {
-						"type": "line",
-						"group": {
-							"style": {
-								"stroke": "#4f7aa6"
-							}
-						}
-					},
-					"active": true,
-					"name": "Annual Mean",
-					"data": temps
-				}, {
-					"plot": {
-						"type": "line",
-						"group": {
-							"style": {
-								"stroke": "#f08e39 "
-							}
-						}
-					},
-					"active": true,
-					"name": "Five year mean",
-					"data": means
-				}]
-			}]
-		}],
-		"caption": [{
-			"title": {
-				"text": "GLOBAL LAND-OCEAN TEMPERATURE INDEX",
-				"style": {
-					"font-size": "20px",
-					"fill": "#545454"
-				}
-			},
-			"subtitle": {
-				"text": "Gloabl Temperature Change",
-				"style": {
-					"font-size": "15px",
-					"font-weight": "Semibold",
-					"fill": "#7B7B7B"
-				}
-			}
-		}],
-		"legend": [{
-			layout: function(obj) {
-				return obj.block;
-			},
-			position: function(obj) {
-				return obj.right;
-			},
-			orientation: function(obj) {
-				return obj.vertical;
-			},
-			alignment: function(obj) {
-				return obj.top;
-			}
-		}],
+    "navigator": [{
+      hide: true
 
-		"navigator": [{
-			hide: true
-
-		}],
-		crossline: [{
-			vertical: {
-				label: {
-					formatter: function(val) {
-						return this.formatter.formatAs(val, '%b %d, %Y');
-					}
-				}
-			}
-		}]
-	},
-	"extensions": {
-		"date-range-chooser": {
-			"disabled": false
-		},
-		"standard-period-selector": {
-			"default-select": "3y",
-			"disabled": false
-		},
-		"growth-analyser": {
-			"disabled": true
-		},
-		"data-aggregator": {
-			"disabled": false
-		}
-	}
+    }]
+  },
+  "extensions": {
+    "date-range-chooser": {
+      "disabled": false
+    },
+    "standard-period-selector": {
+      "disabled": false
+    },
+    "growth-analyser": {
+      "disabled": true
+    },
+    "data-aggregator": {
+      "disabled": true
+    }
+  }
 };
-
-
