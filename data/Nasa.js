@@ -795,24 +795,23 @@ export default {
         return obj.block;
       },
       position: function(obj) {
-        return obj.right;
+        return obj.top;
       },
       orientation: function(obj) {
-        return obj.vertical;
+        return obj.horizontal;
       },
       alignment: function(obj) {
-        return obj.top;
+        return obj.right;
       }
     }],
 
     "navigator": [{
-      hide: true
-
+      hide: false
     }]
   },
   "extensions": {
     "date-range-chooser": {
-      "disabled": false
+      "disabled": true
     },
     "standard-period-selector": {
       "disabled": false

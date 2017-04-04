@@ -48,13 +48,13 @@ const tsData = {
 
   nasa: {
     metadata: {
-      name: 'Global Temperature Avg',
-      desc: 'GLOBAL LAND-OCEAN TEMPERATURE INDEX',
+      name: 'Global Temperature Average',
+      desc: 'The change in global surface temperature',
     },
     data: Nasa,
   },
 };
 
-// window.tsData = tsData;
+window.tsData = tsData;
 
 export default tsData;
