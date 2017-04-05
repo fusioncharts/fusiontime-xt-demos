@@ -6,6 +6,7 @@ import Ebola from './data/Ebola';
 import Nasa from './data/Nasa';
 import GDP from './data/GDP';
 import Sun from './data/Sun';
+import Neuclear from './data/Neuclear';
 
 
 const tsData = {
@@ -56,7 +57,6 @@ const tsData = {
     },
     data: Nasa,
   },
-
   gdp: {
     metadata: {
       name: 'GDP (current US$)',
@@ -70,6 +70,14 @@ const tsData = {
       desc: 'Monthly numbers of sunspots, as from the World Data Center'
     },
     data: Sun
+  },
+  neuclear: {
+    metadata: {
+      name: 'Alternative and Nuclear Energy',
+      desc: 'Percentage of total energy use'
+    },
+    data: Neuclear
+
   }
 };
 
