@@ -5,6 +5,7 @@ import Slack from './data/Slack';
 import Ebola from './data/Ebola';
 import Nasa from './data/Nasa';
 import GDP from './data/GDP';
+import Neuclear from './data/Neuclear';
 
 const tsData = {
   web: {
@@ -61,6 +62,14 @@ const tsData = {
       desc: 'World Bank national accounts data'
     },
     data: GDP
+  },
+
+  neuclear: {
+    metadata: {
+      name: 'Alternative and Nuclear Energy',
+      desc: 'Percentage of total energy use'
+    },
+    data: Neuclear
   }
 };
 
