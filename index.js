@@ -5,12 +5,14 @@ import Slack from './data/Slack';
 import Ebola from './data/Ebola';
 import Nasa from './data/Nasa';
 import GDP from './data/GDP';
+import Sun from './data/Sun';
+
 
 const tsData = {
   web: {
     metadata: {
       name: 'Web Visits and Downloads',
-      desc: 'Simple line series',
+      desc: 'Number of Visits and Downloads',
     },
     data: Web,
   },
@@ -18,15 +20,15 @@ const tsData = {
   apple: {
     metadata: {
       name: 'Apple Stock',
-      desc: 'Candle stick time series chart',
+      desc: 'Candle stick time series chart of Apple',
     },
     data: Apple,
   },
 
   mobile: {
     metadata: {
-      name: 'Different Mobile OS',
-      desc: 'Manipulate data',
+      name: 'Mobile OS',
+      desc: 'Differnet Mobile OS growth with time',
     },
     data: Mobile,
   },
@@ -34,7 +36,7 @@ const tsData = {
   slack: {
     metadata: {
       name: 'Slack Conversations',
-      desc: 'Fetch data from a JSON URL',
+      desc: 'Usage history and frequency',
     },
     data: Slack,
   },
@@ -61,6 +63,13 @@ const tsData = {
       desc: 'World Bank national accounts data'
     },
     data: GDP
+  },
+  sun: {
+    metadata: {
+      name: 'Sunspot',
+      desc: 'Monthly numbers of sunspots, as from the World Data Center'
+    },
+    data: Sun
   }
 };
 
