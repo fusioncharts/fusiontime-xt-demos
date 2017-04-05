@@ -4,6 +4,7 @@ import Mobile from './data/Mobile';
 import Slack from './data/Slack';
 import Ebola from './data/Ebola';
 import Nasa from './data/Nasa';
+import GDP from './data/GDP';
 
 const tsData = {
   web: {
@@ -53,6 +54,14 @@ const tsData = {
     },
     data: Nasa,
   },
+
+  gdp: {
+    metadata: {
+      name: 'GDP (current US$)',
+      desc: 'World Bank national accounts data'
+    },
+    data: GDP
+  }
 };
 
 window.tsData = tsData;
