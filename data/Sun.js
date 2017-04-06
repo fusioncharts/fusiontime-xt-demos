@@ -15891,11 +15891,11 @@ var dates = [], sunspots = [];
 var formatDate = function (date) {
 	var year = String(Math.round(date));
 	var month = (date % 1) * 365 / 30 ;
-    var day = month % 1 * 30;
+  var day = month % 1 * 30;
 	month = String(Math.ceil(month));
 	day = String(Math.ceil(day));
 	/* => Month/day/year */
-	return `${month}/${day}/${year}`;
+	return month + "/" + day + "/" + year;
 }
 
 sunData.forEach(function (sun) {
