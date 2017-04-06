@@ -15,7 +15,7 @@ const tsData = {
       name: 'Web Visits and Downloads',
       desc: 'Number of Visits and Downloads',
     },
-    data: Web,
+    data: Web
   },
 
   apple: {
@@ -23,7 +23,7 @@ const tsData = {
       name: 'Apple Stock',
       desc: 'Candle stick time series chart of Apple',
     },
-    data: Apple,
+    data: Apple
   },
 
   mobile: {
@@ -31,7 +31,7 @@ const tsData = {
       name: 'Mobile OS',
       desc: 'Differnet Mobile OS growth with time',
     },
-    data: Mobile,
+    data: Mobile
   },
 
   slack: {
@@ -39,7 +39,7 @@ const tsData = {
       name: 'Slack Conversations',
       desc: 'Usage history and frequency',
     },
-    data: Slack,
+    data: Slack
   },
 
   ebola: {
@@ -47,7 +47,7 @@ const tsData = {
       name: 'Ebola Outbreak',
       desc: 'Fetch and compare three differnet examples',
     },
-    data: Ebola,
+    data: Ebola
   },
 
   nasa: {
@@ -55,8 +55,9 @@ const tsData = {
       name: 'Global Temperature Average',
       desc: 'The change in global surface temperature',
     },
-    data: Nasa,
+    data: Nasa
   },
+
   gdp: {
     metadata: {
       name: 'GDP (current US$)',
@@ -64,6 +65,7 @@ const tsData = {
     },
     data: GDP
   },
+
   sun: {
     metadata: {
       name: 'Sunspot',
@@ -71,13 +73,13 @@ const tsData = {
     },
     data: Sun
   },
+
   neuclear: {
     metadata: {
       name: 'Alternative and Nuclear Energy',
       desc: 'Percentage of total energy use'
     },
     data: Neuclear
-
   }
 };
 
