@@ -105,13 +105,13 @@ export default {
         return obj.block;
       },
       position: function(obj) {
-        return obj.top;
+        return obj.right;
       },
       orientation: function(obj) {
-        return obj.horizontal;
+        return obj.vertical;
       },
       alignment: function(obj) {
-        return obj.right;
+        return obj.top;
       }
     }],
     "canvas": [{

@@ -15896,7 +15896,7 @@ var formatDate = function (date) {
 	day = String(Math.ceil(day));
 	/* => Month/day/year */
 	return month + "/" + day + "/" + year;
-}
+};
 
 sunData.forEach(function (sun) {
 	dates.push(formatDate(sun.time));
